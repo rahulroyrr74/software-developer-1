@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:14
+    container_name: uber_db
+    environment:
+      POSTGRES_DB: uberdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: uber_app
+    depends_on:
+      - db
