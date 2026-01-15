@@ -1,0 +1,92 @@
+/*css box model
+
+*/
+h3{
+background-color: lightgreen;
+padding: 10px;
+margin-bottom: 0px;
+border: 2px solid blueviolet;
+border-radius: 10px;
+}
+.buttons{
+    margin: 3rem;
+}
+.colorzilla{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#87e0fd+0,53cbf1+40,05abe0+100;Blue+3D+%23+16 */
+    background: linear-gradient(to bottom, rgba(135, 224, 253, 1) 0%, rgba(83, 203, 241, 1) 40%, rgba(5, 171, 224, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+div::after{
+    border: 2px solid black;
+    box-sizing: border-box;
+    transition: all 0.5s linear;
+}
+
+div{
+    position: static;
+    background-color: lightblue;
+    padding: 10px;
+    border: 2px solid blue;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.special{
+    color: blue;
+    font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+    .buttons{
+        background: linear-gradient(to bottom, rgba(255, 200, 124, 1) 0%, rgba(255, 140, 60, 1) 40%, rgba(255, 70, 0, 1) 100%);
+        position: relative;
+        z-index: 101;
+        text-align: center;
+    }
+}
+div.hovered::after{
+    content: " I'm hovered";
+    border: 2px solid black;
+    top: 0;
+    left: 0;
+}
+p::first-line{
+    font-weight: bold;
+    color: darkred;
+}
+p::first-letter{
+    font-size: 200%;
+    color: darkblue;
+}
+:root{
+    --main-color: red;
+}
+.absolute{
+   font-size: 24px;
+}
+.responsive{
+    font-size: 18px;
+}
+div{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+.animation{
+    width: 130px;
+    height: 350px;
+    background-color: lightgreen;
+    text-align: top;
+    font-size: 25px;
+    animation: move 4s 2;
+    animation-fill-mode: forwards;
+}
+@keyframes move{
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(100px);}
+    100%{transform: translateX(0px);}
+}
+.one{
+    color: green;
+    font-size: 20px;
+}
